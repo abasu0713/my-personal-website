@@ -3,7 +3,9 @@
 import 'package:flutter/material.dart';
 
 class MyIntroductionView extends StatelessWidget {
-  const MyIntroductionView({Key? key}) : super(key: key);
+  const MyIntroductionView({Key? key, required this.homeScreenPageController}) : super(key: key);
+
+  final PageController homeScreenPageController;
 
   final String title = "Introduction";
 
@@ -24,9 +26,15 @@ class MyIntroductionView extends StatelessWidget {
                     color: Colors.black87)),
             const SizedBox(height: 50),
             ElevatedButton(
-                onPressed: null,
+                onPressed: (){
+                  if(homeScreenPageController.hasClients){
+                    homeScreenPageController.nextPage(
+                        duration: const Duration(milliseconds: 800),
+                        curve: Curves.easeIn);
+                  }
+                },
                 child: Text("Learn more", style: Theme.of(context).textTheme.headline4!
-                    .copyWith(color: Colors.black87)))
+                    .copyWith(color: Colors.white)))
           ],
         ),
       ),

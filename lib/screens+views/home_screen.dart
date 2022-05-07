@@ -9,30 +9,30 @@ class MyHomePageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final PageController _controller = PageController();
+    final PageController controller = PageController();
     return SizedBox(
       width: MediaQuery.of(context).size.width/2,
       child: PageView(
-        controller: _controller,
+        controller: controller,
         scrollDirection: Axis.vertical,
         children: <Widget>[
-          const MyIntroductionView(),
+          MyIntroductionView(homeScreenPageController: controller),
           Center(
               child: Text("This is going to be my services page view",
                   style: Theme.of(context).textTheme.headline4!
-                      .copyWith(color: Colors.white)
+                      .copyWith(color: Colors.black)
               )
           ),
           Center(
               child: Text("This is going to be my current projects space",
                   style: Theme.of(context).textTheme.headline4!
-                      .copyWith(color: Colors.white)
+                      .copyWith(color: Colors.black)
               )
           ),
           Center(
               child: Text("This is going to be my contacts page view",
                   style: Theme.of(context).textTheme.headline4!
-                      .copyWith(color: Colors.white)
+                      .copyWith(color: Colors.black)
               )
           )
         ],
