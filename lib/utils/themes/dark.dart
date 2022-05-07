@@ -13,7 +13,10 @@ ThemeData myDarkTheme = ThemeData(
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
-      backgroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade800)
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.black87),
+      elevation: MaterialStateProperty.all<double>(10),
+      shadowColor: MaterialStateProperty.all<Color>(Colors.blue.shade50),
+      overlayColor: MaterialStateProperty.all<Color>(Colors.lightBlue),
     ),
   ),
 );

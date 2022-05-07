@@ -33,8 +33,12 @@ class MyIntroductionView extends StatelessWidget {
                         curve: Curves.easeIn);
                   }
                 },
-                child: Text("Learn more", style: Theme.of(context).textTheme.headline4!
-                    .copyWith(color: Colors.white)))
+                child: ListTile(
+                  title: Text("Learn more", style: Theme.of(context).textTheme.headline4!
+                      .copyWith(color: Colors.white)),
+                  trailing: const Icon(Icons.keyboard_arrow_down),
+                )
+            )
           ],
         ),
       ),
