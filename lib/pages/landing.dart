@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../screens+views/home.dart';
+import '../screens+views/home_screen.dart';
 import '../utils/static_images.dart';
 
 class MyLandingPage extends StatelessWidget {
