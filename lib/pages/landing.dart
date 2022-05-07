@@ -28,16 +28,8 @@ class _MyLandingPageState extends State<MyLandingPage> {
     return Scaffold(
       body: Row(
         children: <Widget>[
-          /*Container(
-            width: MediaQuery.of(context).size.width/2,
-            decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(StaticImages.landingPageProfilePicture),
-                    fit: BoxFit.fitWidth
-                )
-            ),
-          ),*/
-          Container(
+          Hero(
+            child: Container(
               decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(StaticImages.landingPageProfilePicture),
@@ -45,6 +37,8 @@ class _MyLandingPageState extends State<MyLandingPage> {
                   )
               ),
               width: MediaQuery.of(context).size.width/2,
+            ),
+            tag: 'hero-profilePic',
           ),
           Expanded(child: Center(
             child: Text("Hi, I am Arko", style: Theme.of(context).textTheme.headline4!.copyWith(color: Colors.white),),

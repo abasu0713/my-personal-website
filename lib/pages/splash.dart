@@ -25,14 +25,17 @@ class _MySplashScreenState extends State<MySplashScreen> {
       nextScreen: const MyLandingPage(),
       duration: 1200,
       pageTransitionType: PageTransitionType.fade,
-      splash: Container(
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(StaticImages.landingPageProfilePicture),
-                fit: BoxFit.cover
-            )
+      splash: Hero(
+        tag: 'hero-profilePic',
+        child: Container(
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage(StaticImages.landingPageProfilePicture),
+                  fit: BoxFit.cover
+              )
+          ),
+          width: MediaQuery.of(context).size.width,
         ),
-        width: MediaQuery.of(context).size.width,
       ),
     );
   }
