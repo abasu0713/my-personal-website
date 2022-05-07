@@ -1,8 +1,5 @@
 
-
-
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import '../utils/static_images.dart';
 
@@ -31,7 +28,7 @@ class _MyLandingPageState extends State<MyLandingPage> {
     return Scaffold(
       body: Row(
         children: <Widget>[
-          Container(
+          /*Container(
             width: MediaQuery.of(context).size.width/2,
             decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -39,6 +36,17 @@ class _MyLandingPageState extends State<MyLandingPage> {
                     fit: BoxFit.fitWidth
                 )
             ),
+          ),*/
+          AnimatedContainer(
+              duration: const Duration(milliseconds: 4000),
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(StaticImages.landingPageProfilePicture),
+                      fit: BoxFit.fitWidth
+                  )
+              ),
+              width: MediaQuery.of(context).size.width/2,
+            curve: Curves.easeIn,
           ),
           Expanded(child: Center(
             child: Text("Hi, I am Arko", style: Theme.of(context).textTheme.headline4!.copyWith(color: Colors.white),),
