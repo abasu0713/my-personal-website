@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_website/pages/landing.dart';
+import 'package:my_website/pages/splash.dart';
 import 'package:my_website/utils/themes/dark.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       darkTheme: myDarkTheme,
       themeMode: ThemeMode.dark,
-      home: const MyLandingPage(),
+      home: const MySplashScreen(),
     );
   }
 }

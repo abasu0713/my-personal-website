@@ -37,8 +37,7 @@ class _MyLandingPageState extends State<MyLandingPage> {
                 )
             ),
           ),*/
-          AnimatedContainer(
-              duration: const Duration(milliseconds: 4000),
+          Container(
               decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(StaticImages.landingPageProfilePicture),
@@ -46,7 +45,6 @@ class _MyLandingPageState extends State<MyLandingPage> {
                   )
               ),
               width: MediaQuery.of(context).size.width/2,
-            curve: Curves.easeIn,
           ),
           Expanded(child: Center(
             child: Text("Hi, I am Arko", style: Theme.of(context).textTheme.headline4!.copyWith(color: Colors.white),),
