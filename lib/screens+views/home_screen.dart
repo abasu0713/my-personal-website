@@ -1,9 +1,9 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:my_website/screens+views/services.dart';
+import 'package:my_website/screens+views/introduction.dart';
+import 'package:my_website/screens+views/title.dart';
 
-import 'introduction.dart';
 
 class MyHomePageView extends StatelessWidget {
   const MyHomePageView({Key? key}) : super(key: key);
@@ -17,8 +17,8 @@ class MyHomePageView extends StatelessWidget {
         controller: controller,
         scrollDirection: Axis.vertical,
         children: <Widget>[
-          MyIntroductionView(homeScreenPageController: controller),
-          const MyServicesView(),
+          MyTitleView(homeScreenPageController: controller),
+          const MyIntroductionView(),
           Center(
               child: Text("This is going to be my current projects space",
                   style: Theme.of(context).textTheme.headline4!
