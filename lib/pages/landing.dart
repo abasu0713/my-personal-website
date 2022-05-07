@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../screens+views/home.dart';
 import '../utils/static_images.dart';
 
 class MyLandingPage extends StatefulWidget {
@@ -33,16 +34,14 @@ class _MyLandingPageState extends State<MyLandingPage> {
               decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(StaticImages.landingPageProfilePicture),
-                      fit: BoxFit.fitWidth
+                      fit: BoxFit.cover
                   )
               ),
               width: MediaQuery.of(context).size.width/2,
             ),
             tag: 'hero-profilePic',
           ),
-          Expanded(child: Center(
-            child: Text("Hi, I am Arko", style: Theme.of(context).textTheme.headline4!.copyWith(color: Colors.white),),
-          ))
+          const MyHomePageView()
         ],
       )  // This trailing comma makes auto-formatting nicer for build methods.
     );
