@@ -8,16 +8,10 @@ import 'package:my_website/pages/landing.dart';
 
 import '../utils/static_images.dart';
 
-class MySplashScreen extends StatefulWidget {
-  final String title = "Arko's splash screen";
+class MySplashScreen extends StatelessWidget {
+  final String title = "Splash Screen";
 
   const MySplashScreen({Key? key}) : super(key: key);
-
-  @override
-  State<MySplashScreen> createState() => _MySplashScreenState();
-}
-
-class _MySplashScreenState extends State<MySplashScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -39,5 +33,4 @@ class _MySplashScreenState extends State<MySplashScreen> {
       ),
     );
   }
-
 }
