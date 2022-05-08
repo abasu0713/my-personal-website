@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:my_website/screens+views/title.dart';
 
 import '../screens+views/introduction.dart';
-import '../screens+views/new_introduction.dart';
 import '../utils/static_images.dart';
 
 class MyLandingPage extends StatefulWidget {
