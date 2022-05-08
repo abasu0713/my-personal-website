@@ -3,7 +3,9 @@
 import 'package:flutter/material.dart';
 
 class MyIntroductionView extends StatelessWidget {
-  const MyIntroductionView({Key? key}) : super(key: key);
+  const MyIntroductionView({Key? key, required this.homeScreenPageController}) : super(key: key);
+
+  final PageController homeScreenPageController;
 
   @override
   Widget build(BuildContext context) {
@@ -45,22 +47,48 @@ class MyIntroductionView extends StatelessWidget {
                         "the first go? It hilarious the kind of hubris that makes up such behavior. ",
                         style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.black87))),
                 Padding(padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 0),
-                    child: Text("And once you have that reality check? It's nothing short of what other's may call "
-                        "an absolute fucking miracle! At this point, you see the nature of things for how they are, "
-                        "and not how you have been taught to believe. Or so you tell yourself, so as to maintain "
-                        "a firm grip on your sanity! Additionally, it gives you a clarity! Over sorts of things that "
-                        "your decade older self, didn't think was possible. Probably even laughed at it! ",
-                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.black87))),
+                    child: Text("And once you have that reality check? It's nothing short of what other's may call an absolute "
+                        "fucking miracle! At this point, you see the nature of things for how they are, and not how you have been "
+                        "taught to believe. Or so you tell yourself, so as to maintain a firm grip on your sanity! Additionally, "
+                        "it gives you a clarity! Over sorts of things that your decade older self, didn't think was possible. "
+                        "Probably even laughed at it! ",
+                        style: Theme.of(context).textTheme.bodyLarge!
+                            .copyWith(color: Colors.black87))),
                 Padding(padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 0),
                     child: Text("A clarity about what you ask? About the place I have in this world and what I may "
                         "have to offer! Not for purpose! Fuck purpose! Pardon my language. No really! I can't tell you what "
-                        "the clarity is for?! I will once I know! But for now all I know is that, like those fundamental "
+                        "the clarity is for?! I will once I know! But for now all I know is that, like those elementary "
                         "particles, the fermions, the gluons, and those darned hard to catch bosons.. We are constantly fighting "
-                        "this upstream of randomized chaos that nature otherwise likes to call entropy. And to survive it, we must "
+                        "this upstream of randomized chaos that nature otherwise likes to call entropy. And to survive it, we "
                         "must yield something of value every now and then. And that's what I am here for!",
+                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.black87))),
+                Padding(padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+                    child: Text("Over the past few years I have learnt a few tricks. And I wanted to utilize them above all. "
+                        "And this is how I recently decided to quit social media, and use the time I otherwise wastefully spent "
+                        "there in building something of value. And as I do that, I wanted to share my journey with people who care! "
+                        "And if you are here, I am guessing you do care! So, thank you, and let's have some fun now shall we!?",
                         style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.black87))),
               ],
             )
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal:25),
+            child: ElevatedButton(
+              onPressed: (){
+                if(homeScreenPageController.hasClients){
+                  homeScreenPageController.nextPage(
+                      duration: const Duration(milliseconds: 800),
+                      curve: Curves.easeIn);
+                }
+              },
+              child: ListTile(
+                title: Text("Not bored? Keep Reading", style: Theme.of(context).textTheme.headline6!
+                    .copyWith(color: Colors.white)),
+                trailing: const Icon(Icons.keyboard_arrow_down),
+              ),
+            ),
           ),
         )
       ],

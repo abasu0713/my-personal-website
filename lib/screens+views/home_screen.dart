@@ -18,7 +18,7 @@ class MyHomePageView extends StatelessWidget {
         scrollDirection: Axis.vertical,
         children: <Widget>[
           MyTitleView(homeScreenPageController: controller),
-          const MyIntroductionView(),
+          MyIntroductionView(homeScreenPageController: controller),
           Center(
               child: Text("This is going to be my current projects space",
                   style: Theme.of(context).textTheme.headline4!
