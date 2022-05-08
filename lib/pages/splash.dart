@@ -17,7 +17,7 @@ class MySplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
       nextScreen: const MyLandingPage(),
-      duration: 1200,
+      duration: 450,
       pageTransitionType: PageTransitionType.fade,
       splash: Hero(
         tag: 'hero-profilePic',
