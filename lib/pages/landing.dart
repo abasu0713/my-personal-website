@@ -71,7 +71,7 @@ class _MyLandingPageState extends State<MyLandingPage>{
       headerSliverBuilder: (context, innerBoxIsScrolled) {
         return [
           const SliverAppBar(
-          expandedHeight: 450.0,
+          expandedHeight: 250.0,
           stretch: true,
           flexibleSpace: FlexibleSpaceBar(
             background: Image(
@@ -83,9 +83,10 @@ class _MyLandingPageState extends State<MyLandingPage>{
       },
       body: PageView(
         scrollDirection: Axis.vertical,
+        controller: _pageController,
         children: [
           MyTitleView(homeScreenPageController: _pageController),
-          MyIntroductionView(homeScreenPageController: _pageController)
+          MyIntroductionNewView(homeScreenPageController: _pageController)
         ],
       ),
     );
