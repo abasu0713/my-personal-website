@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 ThemeData myDarkTheme = ThemeData(
+  textTheme: GoogleFonts.ralewayTextTheme(
+    const TextTheme(
+      bodyLarge: TextStyle(fontSize: 20),
+    )
+  ),
   colorScheme: ColorScheme.fromSwatch(
     primarySwatch: Colors.brown,
     brightness: Brightness.dark,
@@ -17,6 +23,7 @@ ThemeData myDarkTheme = ThemeData(
       elevation: MaterialStateProperty.all<double>(10),
       shadowColor: MaterialStateProperty.all<Color>(Colors.blue.shade50),
       overlayColor: MaterialStateProperty.all<Color>(Colors.lightBlue),
+      textStyle: MaterialStateProperty.all<TextStyle>(GoogleFonts.raleway()),
     ),
   ),
 );
