@@ -15,6 +15,7 @@ class MyTitleView extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 175, horizontal: 25),
       child: Center(
         child: ListView(
+          shrinkWrap: true,
           children: <Widget>[
             Text("I'm arko basu,", style: Theme.of(context).textTheme.headline2!
                 .copyWith(color: Colors.black87)),

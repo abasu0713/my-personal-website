@@ -19,16 +19,19 @@ class MySplashScreen extends StatelessWidget {
       nextScreen: const MyLandingPage(),
       duration: 450,
       pageTransitionType: PageTransitionType.fade,
-      splash: Hero(
-        tag: 'hero-profilePic',
-        child: Container(
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(StaticImages.landingPageProfilePicture),
-                  fit: BoxFit.cover
-              )
+      splash: Scaffold(
+        body: Hero(
+          tag: 'hero-profilePic',
+          child: Container(
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(StaticImages.landingPageProfilePicture),
+                    fit: BoxFit.cover
+                )
+            ),
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
           ),
-          width: MediaQuery.of(context).size.width,
         ),
       ),
     );
